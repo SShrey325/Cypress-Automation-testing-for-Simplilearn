@@ -13,7 +13,7 @@ Ensure you have the following installed:
 ### Steps
 1. Clone the repository:
    ```sh
-   git clone https://github.com/SoorajSundar1505/simpliLearnAutomation
+   git clone https://github.com/SShrey325/Cypress-Automation-testing-for-Simplilearn
    cd <project-folder>
    ```
 2. Install dependencies:
