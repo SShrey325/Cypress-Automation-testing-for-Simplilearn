@@ -1,7 +1,7 @@
 # Cypress Automation for SimpliLearn
 
 ## 🏁 Overview
-Automate lead form submissions on SimpliLearn's course pages using Cypress. This project extracts URLs from a CSV file, navigates to each course page, and executes form submissions seamlessly.
+Automate lead form submissions on Simplilearn's course pages using Cypress. This project extracts URLs from a CSV file, navigates to each course page, and executes form submissions seamlessly.
 
 ## 🔧 Setup & Installation
 
