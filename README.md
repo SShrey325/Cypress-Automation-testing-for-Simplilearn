@@ -1,106 +1,110 @@
-# Cypress Automation Project For SimpliLearn
+# Cypress Automation for SimpliLearn
 
-## 📌 Introduction
-This project automates the lead form submissions on course pages using Cypress. It reads URLs from a CSV file, navigates to each course page, and performs form submissions.
+## 🏁 Overview
+Automate lead form submissions on SimpliLearn's course pages using Cypress. This project extracts URLs from a CSV file, navigates to each course page, and executes form submissions seamlessly.
 
-## 🚀 Installation
+## 🔧 Setup & Installation
 
 ### Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (LTS version recommended)
+Ensure you have the following installed before getting started:
+- [Node.js](https://nodejs.org/) (LTS recommended)
 - [Cypress](https://www.cypress.io/)
 
-### Steps
+### Installation Steps
 1. Clone the repository:
    ```sh
    git clone https://github.com/SShrey325/Cypress-Automation-testing-for-Simplilearn
    cd <project-folder>
    ```
-2. Install dependencies:
+2. Install required dependencies:
    ```sh
    npm install
    ```
-3. Open Cypress:
+3. Launch Cypress:
    ```sh
    npx cypress open
    ```
 
-## 🏗 Project Structure
+## 📂 Project Directory Structure
 ```
 /project-root
 │── cypress
 │   ├── e2e
-│   │   ├── leadForm.cy.js   # Test cases
+│   │   ├── leadForm.cy.js      # Test cases
 │   ├── pages
-│   │   ├── leadFormPage.js  # Page Object Model (POM) for lead form
-│   ├── fixtures             # Test data (CSV, JSON, etc.)
-│   ├── downloads            # Downloaded files (if any)
-│   ├── support              # Custom commands, utilities
-│── package.json             # Dependencies and scripts
-│── cypress.config.js        # Cypress configuration
-│── README.md                # Project documentation
+│   │   ├── leadFormPage.js     # Page Object Model (POM) implementation
+│   ├── fixtures                # Stores test data (CSV, JSON, etc.)
+│   ├── downloads               # Contains any downloaded files
+│   ├── support                 # Custom commands and utilities
+│── package.json                # Dependencies and scripts
+│── cypress.config.js           # Cypress configuration settings
+│── README.md                   # Project documentation
 ```
 
-## 🔧 Configuration
-- Update `cypress.config.js` for environment settings.
-- Place test URLs in the CSV file for dynamic testing.
-- Faker.js is used for generating random test data.
-  - Install Faker.js, cypress-xpath and downloadfile:
-    ```sh
-    npm install @faker-js/faker --save-dev
-    npm install cypress-xpath --save-dev
-    npm install cypress-downloadfile --save-dev
-    ```
-  - Example usage in test files:
-    ```js
-    import { faker } from '@faker-js/faker';
-    import 'cypress-xpath';
-    import "cypress-downloadfile/lib/downloadFileCommand";
-    const randomEmail = faker.internet.email();
-    const randomName = faker.name.fullName();
-    ```
+## ⚙️ Configuration & Setup
+- Adjust `cypress.config.js` to modify environment settings.
+- Store test URLs in a CSV file for dynamic testing.
+- **Faker.js** is utilized to generate random test data.
 
-## 🎯 Running Tests
-To run tests in **headed mode**:
+### Install Required Packages:
+```sh
+npm install @faker-js/faker --save-dev
+npm install cypress-xpath --save-dev
+npm install cypress-downloadfile --save-dev
+```
+
+### Using Faker.js in Tests:
+```js
+import { faker } from '@faker-js/faker';
+import 'cypress-xpath';
+import "cypress-downloadfile/lib/downloadFileCommand";
+const randomEmail = faker.internet.email();
+const randomName = faker.name.fullName();
+```
+
+## 🚀 Executing Tests
+
+### Run Tests in Headed Mode:
 ```sh
 npx cypress open
 ```
-To run tests in **headless mode**:
+
+### Run Tests in Headless Mode:
 ```sh
 npx cypress run
 ```
 
-## 📋 Test Scenarios
-- ✅ Apply for a course (`clickApplyNow` → `fillLeadForm`)
-- ✅ Talk to an advisor (`fillTalkToOurAdvisorForm`)
-- ✅ Request more information (`fillRequestMoreInfoForm`)
+## 📝 Test Scenarios Covered
+- ✅ Course application (`clickApplyNow` → `fillLeadForm`)
+- ✅ Advisor consultation (`fillTalkToOurAdvisorForm`)
+- ✅ Information request (`fillRequestMoreInfoForm`)
 
-## 🛠 Best Practices
-- Use **Page Object Model (POM)** for maintainability.
-- Keep selectors in a separate `locators.js` file.
-- Use **fixtures** for test data management.
-- Implement **custom commands** in `support/commands.js`.
-- Use **Faker.js** for generating dynamic test data.
+## 🔑 Best Practices
+- Implement **Page Object Model (POM)** for improved test maintenance.
+- Define selectors separately in `locators.js`.
+- Manage test data via **fixtures**.
+- Use **custom commands** stored in `support/commands.js`.
+- Utilize **Faker.js** to dynamically generate input values.
 
-## 💡 Contributing
+## 🤝 Contributing
+Want to contribute? Follow these steps:
 1. Fork the repository.
-2. Create a new branch:
+2. Create a feature branch:
    ```sh
    git checkout -b feature/your-feature
    ```
 3. Commit your changes:
    ```sh
-   git commit -m "Add new feature"
+   git commit -m "Implement new feature"
    ```
-4. Push to the branch:
+4. Push the branch:
    ```sh
    git push origin feature/your-feature
    ```
 5. Open a Pull Request.
 
 ## 📜 License
-This project is licensed under the MIT License.
+Licensed under the MIT License.
 
 ---
-🚀 Happy Testing with Cypress! 🎯
-
+🎯 Happy Testing with Cypress! 🚀
